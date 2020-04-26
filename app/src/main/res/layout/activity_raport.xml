@@ -16,7 +16,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -36,6 +36,27 @@
                     app:layout_constraintVertical_bias="0.293"
                     android:layout_marginTop="50dp"/>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Data i godzina: "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/currentTime"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="TextView"
+                        android:textSize="20sp" />
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -59,10 +80,10 @@
                                 android:id="@+id/textView4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Waga"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Waga"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -99,10 +120,10 @@
                                 android:id="@+id/textView5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Wzrost"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Wzrost"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -139,10 +160,10 @@
                                 android:id="@+id/textView6"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Grupa krwi"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Grupa krwi"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -182,10 +203,10 @@
                                 android:id="@+id/textView7"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Poziom cukru"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Poziom cukru"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -220,10 +241,10 @@
                                 android:id="@+id/textView8"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Temperatura"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Temperatura"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -258,10 +279,10 @@
                                 android:id="@+id/textView9"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Ciśnienie krwi"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Ciśnienie krwi"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -296,10 +317,10 @@
                                 android:id="@+id/textView10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Puls"
-                                android:layout_gravity="center"
                                 android:layout_centerInParent="true"
-                                android:textSize="25sp"/>
+                                android:layout_gravity="center"
+                                android:text="Puls"
+                                android:textSize="23sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -317,21 +338,16 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <Button
-                        android:id="@+id/sendDatabutt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="30dp"
-                        android:text="Zatwierdź" />
 
-                    <TextView
-                        android:id="@+id/currentTime"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
                 </LinearLayout>
-
+                <Button
+                android:id="@+id/sendDatabutt"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="#B3F6F6F3"
+                android:text="Zatwierdź" />
             </LinearLayout>
 
         </RelativeLayout>

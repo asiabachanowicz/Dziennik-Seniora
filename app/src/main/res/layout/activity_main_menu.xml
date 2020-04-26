@@ -7,13 +7,12 @@
     android:orientation="vertical"
     android:background="@drawable/background2"
     tools:context=".MainMenu">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -21,15 +20,14 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="150dp"
                     android:orientation="horizontal"
                     android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="50dp">
+                    android:layout_marginLeft="20dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
-                        android:layout_height="300px"
+                        android:layout_height="150dp"
                         android:layout_weight="1"
                         android:background="@drawable/customborder">
                         <ImageView
@@ -41,14 +39,17 @@
                         <Button
                             android:id="@+id/databutt"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="70dp"
                             android:layout_weight="4"
-                            android:text="Edytuj dane" />
+                            android:shadowColor="#FFFFFF"
+                            android:background="#B3F6F6F3"
+                            android:text="Edytuj dane"
+                            android:textSize="13sp" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
-                        android:layout_height="300px"
+                        android:layout_height="150dp"
                         android:layout_weight="1"
                         android:background="@drawable/customborder">
                         <ImageView
@@ -60,22 +61,23 @@
                         <Button
                             android:id="@+id/calendarbutt"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="70dp"
                             android:layout_weight="4"
-                            android:text="kalendarz" />
+                            android:background="#B3F6F6F3"
+                            android:text="kalendarz"
+                            android:textSize="13sp" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="150dp"
                     android:orientation="horizontal"
                     android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="50dp">
+                    android:layout_marginLeft="20dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
-                        android:layout_height="300px"
+                        android:layout_height="150dp"
                         android:layout_weight="1"
                         android:background="@drawable/customborder">
                         <ImageView
@@ -87,14 +89,16 @@
                         <Button
                             android:id="@+id/reportbutt"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="70dp"
                             android:layout_weight="4"
-                            android:text="uzupełnij raport" />
+                            android:background="#B3F6F6F3"
+                            android:text="uzupełnij raport"
+                            android:textSize="13sp" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
-                        android:layout_height="300px"
+                        android:layout_height="150dp"
                         android:layout_weight="1"
                         android:background="@drawable/customborder">
                         <ImageView
@@ -102,20 +106,17 @@
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:src="@drawable/icon4"></ImageView>
-
                         <Button
                             android:id="@+id/contactbutt"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="70dp"
                             android:layout_weight="4"
-                            android:text="kontakt z lekarzem" />
+                            android:background="#B3F6F6F3"
+                            android:text="kontakt z lekarzem"
+                            android:textSize="13sp" />
                     </LinearLayout>
                 </LinearLayout>
-
             </LinearLayout>
         </RelativeLayout>
-
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

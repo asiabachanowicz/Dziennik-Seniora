@@ -3,6 +3,8 @@ package com.example.dziennikseniora;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Selection;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,8 +37,17 @@ public class Raport extends AppCompatActivity {
         final EditText pulseedit = findViewById(R.id.editText10);
         final TextView logdate = findViewById(R.id.currentTime);
 
+        //constant text
+        weightedit.setText(" kg");
+        heightedit.setText(" cm");
+        sugaredit.setText(" mg/dL");
+        tempedit.setText(" °C");
+        pressureedit.setText(" mmHg/mmHg");
+        pulseedit.setText(" /min");
+
         Button sendDatabutt = findViewById(R.id.sendDatabutt);
 
+        //set current time
         TextView date;
         Date currentTime = Calendar.getInstance().getTime();
         date = (TextView) findViewById(R.id.currentTime);
@@ -122,6 +133,9 @@ public class Raport extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+
+                Intent intent4 = new Intent(Raport.this, MainMenu.class);
+                startActivity(intent4);
             }
         });
 
