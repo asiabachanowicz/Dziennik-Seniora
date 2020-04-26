@@ -1,5 +1,6 @@
 package com.example.dziennikseniora;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,8 +35,8 @@ public class FirstFragment extends Fragment {
         TextView passtext = view.findViewById(R.id.textView2);
         passtext.setText("Wpisz swoje hasło");
 
-        final EditText loginedit = view.findViewById(R.id.editText3);
-        final EditText passedit = view.findViewById(R.id.editText4);
+        final EditText loginedit = view.findViewById(R.id.editText5);
+        final EditText passedit = view.findViewById(R.id.editText6);
 
         Button loginbutt = view.findViewById(R.id.button);
 
@@ -57,7 +57,12 @@ public class FirstFragment extends Fragment {
                         e.printStackTrace();
                     }
                 }
+                Intent intent = new Intent(getActivity(), MainMenu.class);
+                startActivity(intent);
                 }
         });
     }
+
+
 }
+
