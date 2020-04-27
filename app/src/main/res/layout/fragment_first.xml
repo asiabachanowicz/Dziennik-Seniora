@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="212dp"
-        android:layout_height="39dp"
+        android:layout_width="326dp"
+        android:layout_height="40dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="213dp"
+        android:layout_width="326dp"
         android:layout_height="40dp"
         android:background="#FFFFFF"
         android:ems="10"
@@ -44,9 +44,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.397" />
 
     <TextView
         android:id="@+id/textView2"
@@ -56,14 +57,15 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.535" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="150dp"
-        android:layout_height="45dp"
+        android:layout_height="47dp"
         android:background="#B3F6F6F3"
         android:text="Zaloguj się"
         android:textColorHighlight="#FFFFFF"
@@ -74,7 +76,7 @@
         app:layout_constraintVertical_bias="0.714" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/sendRegisterDatabutt"
         android:layout_width="150dp"
         android:layout_height="47dp"
         android:background="#B3F6F6F3"

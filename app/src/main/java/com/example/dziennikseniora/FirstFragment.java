@@ -30,15 +30,11 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView logintext = view.findViewById(R.id.textView);
-        logintext.setText("Wpisz swój login");
-        TextView passtext = view.findViewById(R.id.textView2);
-        passtext.setText("Wpisz swoje hasło");
-
         final EditText loginedit = view.findViewById(R.id.editText5);
         final EditText passedit = view.findViewById(R.id.editText6);
 
         Button loginbutt = view.findViewById(R.id.button);
+        Button registerbutt = view.findViewById(R.id.sendRegisterDatabutt);
 
 
         loginbutt.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +56,15 @@ public class FirstFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), MainMenu.class);
                 startActivity(intent);
                 }
+        });
+
+        registerbutt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent2 = new Intent(getActivity(), Register.class);
+                startActivity(intent2);
+            }
         });
     }
 

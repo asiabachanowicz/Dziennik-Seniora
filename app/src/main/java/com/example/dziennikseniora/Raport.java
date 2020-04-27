@@ -1,22 +1,20 @@
 package com.example.dziennikseniora;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Selection;
-import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -29,17 +27,13 @@ public class Raport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raport);
 
-        final EditText weightedit = findViewById(R.id.editText5);
-        final EditText heightedit = findViewById(R.id.editText6);
-        final EditText sugaredit = findViewById(R.id.editText7);
-        final EditText tempedit = findViewById(R.id.editText8);
-        final EditText pressureedit = findViewById(R.id.editText9);
-        final EditText pulseedit = findViewById(R.id.editText10);
+        final EditText sugaredit = findViewById(R.id.editText);
+        final EditText tempedit = findViewById(R.id.editText2);
+        final EditText pressureedit = findViewById(R.id.editText3);
+        final EditText pulseedit = findViewById(R.id.editText4);
         final TextView logdate = findViewById(R.id.currentTime);
 
         //constant text
-        weightedit.setText(" kg");
-        heightedit.setText(" cm");
         sugaredit.setText(" mg/dL");
         tempedit.setText(" °C");
         pressureedit.setText(" mmHg/mmHg");
@@ -54,62 +48,10 @@ public class Raport extends AppCompatActivity {
         SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         date.setText(dateFormatter.format(currentTime));
 
-
-        final Spinner spinner = (Spinner)findViewById(R.id.spinner1);
-        String[] elementy = {"A Rh+", "A Rh-", "B Rh+", "B Rh-", "AB Rh+", "AB Rh-", "0 Rh+", "0 Rh-"};
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, elementy);
-
-        spinner.setAdapter(adapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1,
-                                       int id, long position) {
-
-                //Toast.makeText(Raport.this, "Wybrano opcję" + (id+1), Toast.LENGTH_SHORT).show();
-
-                switch((int)position)
-                {
-                    case 0:
-                        //wybrano pierwszy element
-                        break;
-                    case 1:
-                        //wybrano drugi element
-                        break;
-                    case 2:
-                        //wybrano trzeci element
-                        break;
-                    case 3:
-                        //wybrano czwarty element
-                        break;
-                    case 4:
-                        //wybrano piąty element
-                        break;
-                    case 6:
-                        //wybrano piąty element
-                        break;
-                    case 7:
-                        //wybrano piąty element
-                        break;
-                    case 8:
-                        //wybrano piąty element
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-
-            }
-        });
-
         sendDatabutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 JSONObject reportdata = new JSONObject();
-                String user_weight = weightedit.getText().toString();
-                String user_height = heightedit.getText().toString();
                 String user_sugar = sugaredit.getText().toString();
                 String user_temp = tempedit.getText().toString();
                 String user_pressure = pressureedit.getText().toString();
@@ -117,10 +59,8 @@ public class Raport extends AppCompatActivity {
                 String user_logDate = logdate.getText().toString();
 
 
-                if (user_weight != "" && user_height != "" && user_sugar != "" && user_temp != "" && user_pressure != "" && user_pulse != "") {
+                if (user_sugar != "" && user_temp != "" && user_pressure != "" && user_pulse != "") {
                     try {
-                        reportdata.put("weight", user_weight);
-                        reportdata.put("height", user_height);
                         reportdata.put("sugar", user_sugar);
                         reportdata.put("temperature", user_temp);
                         reportdata.put("blood pressure", user_pressure);
@@ -141,6 +81,30 @@ public class Raport extends AppCompatActivity {
 
     }
 
+    //menu bar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item1:
+                Toast.makeText(this, "Edytowanie zdjęcia profilowego", Toast.LENGTH_SHORT).show();
+            case R.id.item2:
+                Toast.makeText(this, "Edytowanie", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item3:
+                Toast.makeText(this, "Wylogowano", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
 
 }

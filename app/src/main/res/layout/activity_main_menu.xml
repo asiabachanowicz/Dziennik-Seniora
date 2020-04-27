@@ -7,51 +7,61 @@
     android:orientation="vertical"
     android:background="@drawable/background2"
     tools:context=".MainMenu">
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-116dp"
+        tools:layout_editor_absoluteY="36dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp">
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
                         android:layout_height="150dp"
                         android:layout_weight="1"
-                        android:background="@drawable/customborder">
+                        android:background="@drawable/customborder"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
-                            android:src="@drawable/icon1"></ImageView>
+                            android:src="@drawable/icon5"></ImageView>
 
                         <Button
                             android:id="@+id/databutt"
                             android:layout_width="match_parent"
                             android:layout_height="70dp"
                             android:layout_weight="4"
-                            android:shadowColor="#FFFFFF"
                             android:background="#B3F6F6F3"
-                            android:text="Edytuj dane"
+                            android:shadowColor="#FFFFFF"
+                            android:text="Powiadomienia o lekach"
                             android:textSize="13sp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
                         android:layout_height="150dp"
                         android:layout_weight="1"
-                        android:background="@drawable/customborder">
+                        android:background="@drawable/customborder"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -68,18 +78,21 @@
                             android:textSize="13sp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp">
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
                         android:layout_height="150dp"
                         android:layout_weight="1"
-                        android:background="@drawable/customborder">
+                        android:background="@drawable/customborder"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -95,17 +108,20 @@
                             android:text="uzupełnij raport"
                             android:textSize="13sp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
                         android:layout_height="150dp"
                         android:layout_weight="1"
-                        android:background="@drawable/customborder">
+                        android:background="@drawable/customborder"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:src="@drawable/icon4"></ImageView>
+
                         <Button
                             android:id="@+id/contactbutt"
                             android:layout_width="match_parent"
