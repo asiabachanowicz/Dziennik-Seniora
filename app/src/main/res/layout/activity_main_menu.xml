@@ -45,7 +45,7 @@
                             android:src="@drawable/icon5"></ImageView>
 
                         <Button
-                            android:id="@+id/databutt"
+                            android:id="@+id/alertbutt"
                             android:layout_width="match_parent"
                             android:layout_height="70dp"
                             android:layout_weight="4"

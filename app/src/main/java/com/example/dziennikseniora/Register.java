@@ -98,6 +98,8 @@ public class Register extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+                Intent intent = new Intent(Register.this, MainMenu.class);
+                startActivity(intent);
             }
         });
 

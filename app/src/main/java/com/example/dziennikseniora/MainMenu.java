@@ -19,20 +19,20 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        Button databutt = findViewById(R.id.databutt);
+        Button alertbutt = findViewById(R.id.alertbutt);
         Button calendarbutt = findViewById(R.id.calendarbutt);
         Button reportbutt = findViewById(R.id.reportbutt);
         Button contactbutt = findViewById(R.id.contactbutt);
 
-        /*
-        databutt.setOnClickListener(new View.OnClickListener() {
+
+        alertbutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainMenu.this, .class);
+                Intent intent1 = new Intent(MainMenu.this, Alert.class);
                 startActivity(intent1);
             }
         });
-
+/*
         calendarbutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

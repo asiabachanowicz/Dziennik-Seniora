@@ -29,14 +29,16 @@ public class Raport extends AppCompatActivity {
 
         final EditText sugaredit = findViewById(R.id.editText);
         final EditText tempedit = findViewById(R.id.editText2);
-        final EditText pressureedit = findViewById(R.id.editText3);
+        final EditText Spressureedit = findViewById(R.id.editText10);
+        final EditText Dpressureedit = findViewById(R.id.editText3);
         final EditText pulseedit = findViewById(R.id.editText4);
         final TextView logdate = findViewById(R.id.currentTime);
 
         //constant text
         sugaredit.setText(" mg/dL");
         tempedit.setText(" °C");
-        pressureedit.setText(" mmHg/mmHg");
+        Spressureedit.setText(" mmHg");
+        Dpressureedit.setText(" mmHg");
         pulseedit.setText(" /min");
 
         Button sendDatabutt = findViewById(R.id.sendDatabutt);
@@ -51,24 +53,28 @@ public class Raport extends AppCompatActivity {
         sendDatabutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 JSONObject reportdata = new JSONObject();
                 String user_sugar = sugaredit.getText().toString();
                 String user_temp = tempedit.getText().toString();
-                String user_pressure = pressureedit.getText().toString();
+                String user_Spressure = Spressureedit.getText().toString();
+                String user_Dpressure = Dpressureedit.getText().toString();
                 String user_pulse = pulseedit.getText().toString();
                 String user_logDate = logdate.getText().toString();
 
 
-                if (user_sugar != "" && user_temp != "" && user_pressure != "" && user_pulse != "") {
+                if (user_sugar != "" && user_temp != "" && user_Spressure != "" && user_Dpressure != "" && user_pulse != "") {
                     try {
                         reportdata.put("sugar", user_sugar);
                         reportdata.put("temperature", user_temp);
-                        reportdata.put("blood pressure", user_pressure);
+                        reportdata.put("systolic blood pressure", user_Spressure);
+                        reportdata.put("diastolic blood pressure", user_Dpressure);
                         reportdata.put("pulse", user_pulse);
                         reportdata.put("date", user_logDate);
 
                         Log.e("TAG", reportdata.toString());
                         new SendJSONtoServer().execute("http://192.168.0.66:8080/telematyka-serwer/servletdata", reportdata.toString());
+                        Toast.makeText(Raport.this, "Zapisano", Toast.LENGTH_SHORT).show();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

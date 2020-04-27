@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Alert"></activity>
+        <activity android:name=".Register" />
         <activity android:name=".Raport" />
         <activity android:name=".MainMenu" />
         <activity
