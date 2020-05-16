@@ -65,12 +65,15 @@ public class Raport extends AppCompatActivity {
 
                 if (user_sugar != "" && user_temp != "" && user_Spressure != "" && user_Dpressure != "" && user_pulse != "") {
                     try {
+                        String user_login = FirstFragment.user_login;
                         reportdata.put("sugar", user_sugar);
                         reportdata.put("temperature", user_temp);
                         reportdata.put("systolic blood pressure", user_Spressure);
                         reportdata.put("diastolic blood pressure", user_Dpressure);
                         reportdata.put("pulse", user_pulse);
                         reportdata.put("date", user_logDate);
+                        reportdata.put("login", user_login);
+                        reportdata.put("type", "dailyraport");
 
                         Log.e("TAG", reportdata.toString());
                         new SendJSONtoServer().execute("http://192.168.0.66:8080/telematyka-serwer/servletdata", reportdata.toString());
