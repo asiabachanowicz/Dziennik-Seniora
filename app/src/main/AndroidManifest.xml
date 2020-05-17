@@ -17,6 +17,7 @@
         <activity android:name=".Register" />
         <activity android:name=".Raport" />
         <activity android:name=".MainMenu" />
+        <activity android:name=".CalendarMenu" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

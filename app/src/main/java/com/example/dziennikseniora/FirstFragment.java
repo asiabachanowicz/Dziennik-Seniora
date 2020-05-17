@@ -77,10 +77,10 @@ public class FirstFragment extends Fragment {
                         e.printStackTrace();
                     }
                 }
-                if (SendJSONtoServer.logowany == true) {
+              //  if (SendJSONtoServer.logowany == true) {
                     Intent intent = new Intent(getActivity(), MainMenu.class);
                     startActivity(intent);
-                }
+              //  }
             }
         });
 

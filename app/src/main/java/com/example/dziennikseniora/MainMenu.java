@@ -34,7 +34,8 @@ public class MainMenu extends AppCompatActivity {
             calendarbutt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent2 = new Intent(MainMenu.this, CalendarMenu.class);
+                    startActivity(intent2);
                 }
             });
             reportbutt.setOnClickListener(new View.OnClickListener() {
