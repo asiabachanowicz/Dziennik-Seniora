@@ -35,11 +35,11 @@ public class Raport extends AppCompatActivity {
         final TextView logdate = findViewById(R.id.currentTime);
 
         //constant text
-        sugaredit.setText(" mg/dL");
-        tempedit.setText(" °C");
-        Spressureedit.setText(" mmHg");
-        Dpressureedit.setText(" mmHg");
-        pulseedit.setText(" /min");
+//        sugaredit.setText(" mg/dL", TextView.BufferType.EDITABLE);
+//        tempedit.setText(" °C");
+//        Spressureedit.setText(" mmHg");
+//        Dpressureedit.setText(" mmHg");
+//        pulseedit.setText(" /min");
 
         Button sendDatabutt = findViewById(R.id.sendDatabutt);
 
@@ -66,6 +66,7 @@ public class Raport extends AppCompatActivity {
                 if (user_sugar != "" && user_temp != "" && user_Spressure != "" && user_Dpressure != "" && user_pulse != "") {
                     try {
                         String user_login = FirstFragment.user_login;
+                        String user_pass = FirstFragment.user_pass;
                         reportdata.put("sugar", user_sugar);
                         reportdata.put("temperature", user_temp);
                         reportdata.put("systolic blood pressure", user_Spressure);
@@ -73,10 +74,11 @@ public class Raport extends AppCompatActivity {
                         reportdata.put("pulse", user_pulse);
                         reportdata.put("date", user_logDate);
                         reportdata.put("login", user_login);
+                        reportdata.put("password", user_pass);
                         reportdata.put("type", "dailyraport");
 
                         Log.e("TAG", reportdata.toString());
-                        new SendJSONtoServer().execute("http://192.168.0.66:8080/telematyka-serwer/servletdata", reportdata.toString());
+                        new SendJSONtoServer().execute("http://192.168.1.24:8080/telematyka-serwer/servletdata", reportdata.toString());
                         Toast.makeText(Raport.this, "Zapisano", Toast.LENGTH_SHORT).show();
                     } catch (JSONException e) {
                         e.printStackTrace();

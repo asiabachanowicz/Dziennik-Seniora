@@ -82,7 +82,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center"
-                                android:text="Poziom cukru"
+                                android:text="Poziom cukru [mg/dL]"
                                 android:textSize="23sp" />
                         </LinearLayout>
 
@@ -120,7 +120,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center"
-                                android:text="Temperatura"
+                                android:text="Temperatura [°C]"
                                 android:textSize="23sp" />
                         </LinearLayout>
 
@@ -184,7 +184,7 @@
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="10dp"
-                                android:text="   skurczowe"
+                                android:text="   skurczowe [mmHg]"
                                 android:textSize="20sp" />
                         </LinearLayout>
 
@@ -223,7 +223,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center"
-                                android:text="   rozkurczowe"
+                                android:text="   rozkurczowe [mmHg]"
                                 android:textSize="20sp" />
                         </LinearLayout>
 
@@ -261,7 +261,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center"
-                                android:text="Puls"
+                                android:text="Puls [/min]"
                                 android:textSize="23sp" />
                         </LinearLayout>
 

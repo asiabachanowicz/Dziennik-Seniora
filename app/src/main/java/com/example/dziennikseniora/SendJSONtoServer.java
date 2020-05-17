@@ -17,7 +17,6 @@ import static androidx.core.content.ContextCompat.startActivity;
 
 class SendJSONtoServer extends AsyncTask<String, Void, String> {
     static boolean logowany = false;
-    public String result_;
 
 
     @Override

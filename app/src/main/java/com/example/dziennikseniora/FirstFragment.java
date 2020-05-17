@@ -26,6 +26,7 @@ import static android.text.format.Formatter.formatIpAddress;
 
 public class FirstFragment extends Fragment {
     public static String user_login;
+    public static String user_pass;
     private static Object SavedState;
     public boolean accepted = false;
     private Activity activity;
@@ -61,7 +62,7 @@ public class FirstFragment extends Fragment {
             public void onClick(View v) {
                 JSONObject logindata = new JSONObject();
                 user_login = loginedit.getText().toString();
-                String user_pass = passedit.getText().toString();
+                user_pass = passedit.getText().toString();
                 if (user_login != "" && user_pass != "") {
                     try {
                         SendJSONtoServer JS = new SendJSONtoServer();
