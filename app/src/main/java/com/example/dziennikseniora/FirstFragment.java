@@ -71,7 +71,7 @@ public class FirstFragment extends Fragment {
                         logindata.put("type", "log");
                         Log.e("TAG", logindata.toString());
                         logindata.put("adres", getIPaddr());
-                        JS.execute("http://192.168.1.24:8080/telematyka-serwer/logowanie", logindata.toString());
+                        JS.execute("http://192.168.0.66:8080/telematyka-serwer/logowanie", logindata.toString());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     } catch (Exception e) {

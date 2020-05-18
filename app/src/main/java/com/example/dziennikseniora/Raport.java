@@ -78,7 +78,7 @@ public class Raport extends AppCompatActivity {
                         reportdata.put("type", "dailyraport");
 
                         Log.e("TAG", reportdata.toString());
-                        new SendJSONtoServer().execute("http://192.168.1.24:8080/telematyka-serwer/servletdata", reportdata.toString());
+                        new SendJSONtoServer().execute("http://192.168.0.66:8080/telematyka-serwer/servletdata", reportdata.toString());
                         Toast.makeText(Raport.this, "Zapisano", Toast.LENGTH_SHORT).show();
                     } catch (JSONException e) {
                         e.printStackTrace();
