@@ -155,11 +155,8 @@ public class CalendarMenu extends AppCompatActivity {
 
         protected void onPostExecute(String result) {
             dialog.dismiss();
-            Log.e("TAG", result);
             allGroups.clear();
-
             result = result.replace("=", ":");
-            // result example [{"tetno":"10","cisnienie":"5"},{"tetno":"3","cisnienie":"3"}]
             JSONArray jArray = null;
             try {
                 jArray = new JSONArray(result);
@@ -183,8 +180,6 @@ public class CalendarMenu extends AppCompatActivity {
                     rap.add("Ciśnienie skurczowe " + cisnienie_s);
                     cisnienie_r = (String) jObject.get("cisnienie_r");
                     rap.add("Ciśnienie rozkurczowe " + cisnienie_r);
-                   // waga = (String) jObject.get("waga");
-                  //  rap.add("Waga " + waga);
                     cukier = (String) jObject.get("cukier");
                     rap.add("Poziom cukru " + cukier);
                     data = (String) jObject.get("data");

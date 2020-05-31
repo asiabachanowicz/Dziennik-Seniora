@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -78,10 +79,13 @@ public class FirstFragment extends Fragment {
                         e.printStackTrace();
                     }
                 }
-              //  if (SendJSONtoServer.logowany == true) {
+                if (SendJSONtoServer.logowany == true) {
                     Intent intent = new Intent(getActivity(), MainMenu.class);
                     startActivity(intent);
-              //  }
+                }
+                else {
+                    Toast.makeText(activity.getApplicationContext(),"Błędne hasło lub brak!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
