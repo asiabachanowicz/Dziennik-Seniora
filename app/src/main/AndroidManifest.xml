@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Alert"></activity>
+        <activity android:name=".AlertReceiver"></activity>
+        <activity android:name=".AddAlert" />
+        <activity android:name=".Alert" />
         <activity android:name=".Register" />
         <activity android:name=".Raport" />
         <activity android:name=".MainMenu" />
@@ -28,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".AlertReceiver"/>
 
         <meta-data
             android:name="preloaded_fonts"
