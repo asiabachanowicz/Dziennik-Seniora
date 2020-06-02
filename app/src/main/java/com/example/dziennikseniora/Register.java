@@ -111,8 +111,6 @@ public class Register extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                Intent intent = new Intent(Register.this, MainMenu.class);
-                startActivity(intent);
             }
         });
 
@@ -206,6 +204,13 @@ public class Register extends AppCompatActivity {
 
         protected void onPostExecute(String result) {
             Log.e("TAG", result);
+            if (result.contains("utworzono")) {
+                Intent intent = new Intent(Register.this, MainMenu.class);
+                startActivity(intent);
+            }
+            else {
+                Toast.makeText(getApplicationContext(), "Zajeta nazwa uzytkownika", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

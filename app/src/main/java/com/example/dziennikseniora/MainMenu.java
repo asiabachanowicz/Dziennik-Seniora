@@ -45,15 +45,13 @@ public class MainMenu extends AppCompatActivity {
                     startActivity(intent3);
                 }
             });
-        /*
         contactbutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4 = new Intent(MainMenu.this, .class);
+                Intent intent4 = new Intent(MainMenu.this, DoctorMessage.class);
                 startActivity(intent4);
             }
         });
-        */
 
         }
 
