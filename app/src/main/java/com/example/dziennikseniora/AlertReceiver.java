@@ -27,7 +27,7 @@ public class AlertReceiver extends BroadcastReceiver {
         // Prepare notification.
         Notification.Builder builder = new Notification.Builder(context);
         builder.setSmallIcon(android.R.drawable.ic_dialog_info)
-                .setContentTitle("It's Time!")
+                .setContentTitle("Przypomnienie: ")
                 .setContentText(message)
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)

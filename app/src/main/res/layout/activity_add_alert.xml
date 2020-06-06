@@ -5,67 +5,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background2"
-    tools:context=".Raport">
+    tools:context=".Raport"
+    android:background="@drawable/background2">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-82dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:background="#4DFFFFFF"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="20dp"
+                android:fontFamily="@font/coustard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="Dodaj nowe powiadomienie"
-                android:textSize="25dp" />
+                android:text="Dodane powiadomienia"
+                android:textSize="20dp" />
 
-            <EditText
-                android:layout_marginTop="20dp"
-                android:id="@+id/editText"
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Powiadomienie: "
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Data powiadomienia: "
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Godzina powiadomienia: "
+                android:textSize="17dp" />
+
+            <TextView
+                android:fontFamily="@font/coustard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Nazwa powiadomienia"/>
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Dodaj nowe powiadomienie"
+                android:textColorLink="#04686E"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#FFFFFF"
+                android:hint="Nazwa powiadomienia" />
 
             <DatePicker
-                android:layout_marginTop="20dp"
                 android:id="@+id/datePicker"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="300dp"
-                android:layout_height="350dp"/>
-            <TimePicker
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:headerBackground="#04686E" />
+
+            <TimePicker
                 android:id="@+id/timePicker"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="300dp"
-                android:layout_height="350dp"/>
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:headerBackground="#04686E" />
+
             <Switch
                 android:id="@+id/switch1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Powtarzaj" />
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Powtarzaj"
+                android:textColorLink="#04686E"
+                android:textSize="17dp" />
+
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
                 <Button
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zapisz"/>
+                    android:text="Zapisz" />
 
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Anuluj" />
+                    android:text="Wróć" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

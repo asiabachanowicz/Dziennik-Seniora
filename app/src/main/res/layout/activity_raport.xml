@@ -37,6 +37,7 @@
                     android:layout_marginTop="50dp"/>
 
                 <LinearLayout
+                    android:background="#4DFFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp">
@@ -58,9 +59,9 @@
                         android:textSize="20sp" />
                 </LinearLayout>
                 <LinearLayout
+                    android:background="#4DFFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="50dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -278,19 +279,21 @@
                                 android:ems="10"
                                 android:inputType="textPersonName" />
                         </LinearLayout>
+
+
                     </LinearLayout>
 
 
                 </LinearLayout>
-                <Button
-                android:id="@+id/sendDatabutt"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="#B3F6F6F3"
-                android:text="Zatwierdź" />
-            </LinearLayout>
+                    <Button
+                    android:id="@+id/sendDatabutt"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="#B3F6F6F3"
+                    android:text="Zatwierdź" />
+                </LinearLayout>
 
         </RelativeLayout>
 

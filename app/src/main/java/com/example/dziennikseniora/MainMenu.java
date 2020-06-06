@@ -27,7 +27,7 @@ public class MainMenu extends AppCompatActivity {
             alertbutt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent1 = new Intent(MainMenu.this, Alert.class);
+                    Intent intent1 = new Intent(MainMenu.this, AddAlert.class);
                     startActivity(intent1);
                 }
             });
