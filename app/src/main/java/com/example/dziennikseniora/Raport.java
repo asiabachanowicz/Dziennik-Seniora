@@ -33,13 +33,15 @@ public class Raport extends AppCompatActivity {
         final EditText Dpressureedit = findViewById(R.id.editText3);
         final EditText pulseedit = findViewById(R.id.editText4);
         final TextView logdate = findViewById(R.id.currentTime);
+        final EditText Moodedit = findViewById(R.id.editText5);
+        final EditText Medicineedit = findViewById(R.id.editText6);
 
         //constant text
-//        sugaredit.setText(" mg/dL", TextView.BufferType.EDITABLE);
-//        tempedit.setText(" °C");
-//        Spressureedit.setText(" mmHg");
-//        Dpressureedit.setText(" mmHg");
-//        pulseedit.setText(" /min");
+        sugaredit.setText(" mg/dL", TextView.BufferType.EDITABLE);
+        tempedit.setText(" °C");
+        Spressureedit.setText(" mmHg");
+        Dpressureedit.setText(" mmHg");
+        pulseedit.setText(" /min");
 
         Button sendDatabutt = findViewById(R.id.sendDatabutt);
 
@@ -61,9 +63,11 @@ public class Raport extends AppCompatActivity {
                 String user_Dpressure = Dpressureedit.getText().toString();
                 String user_pulse = pulseedit.getText().toString();
                 String user_logDate = logdate.getText().toString();
+                String user_mood = Moodedit.getText().toString();
+                String user_medicine = Medicineedit.getText().toString();
 
 
-                if (user_sugar != "" && user_temp != "" && user_Spressure != "" && user_Dpressure != "" && user_pulse != "") {
+                if (user_sugar != "" && user_temp != "" && user_Spressure != "" && user_Dpressure != "" && user_pulse != "" && user_mood != "" && user_medicine!= "") {
                     try {
                         String user_login = FirstFragment.user_login;
                         String user_pass = FirstFragment.user_pass;
@@ -72,6 +76,8 @@ public class Raport extends AppCompatActivity {
                         reportdata.put("systolic blood pressure", user_Spressure);
                         reportdata.put("diastolic blood pressure", user_Dpressure);
                         reportdata.put("pulse", user_pulse);
+                        reportdata.put("mood", user_mood);
+                        reportdata.put("medicine", user_medicine);
                         reportdata.put("date", user_logDate);
                         reportdata.put("login", user_login);
                         reportdata.put("password", user_pass);

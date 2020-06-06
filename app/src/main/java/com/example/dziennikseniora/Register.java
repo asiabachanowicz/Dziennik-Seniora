@@ -45,6 +45,7 @@ public class Register extends AppCompatActivity {
         final EditText passwordedit = findViewById(R.id.editText6);
         final EditText weightedit = findViewById(R.id.editText);
         final EditText heightedit = findViewById(R.id.editText2);
+        final EditText numberedit = findViewById(R.id.nrlekarza);
         final JSONObject registerdata = new JSONObject();
 
         //constant text
@@ -97,13 +98,15 @@ public class Register extends AppCompatActivity {
                 String user_password = passwordedit.getText().toString();
                 String user_weight = weightedit.getText().toString();
                 String user_height = heightedit.getText().toString();
+                String user_number = numberedit.getText().toString();
 
-                if (user_login != "" && user_password != "" && user_weight != "" && user_weight != "") {
+                if (user_login != "" && user_password != "" && user_weight != "" && user_weight != "" && user_number != "") {
                     try {
                         registerdata.put("login", user_login);
                         registerdata.put("password", user_password);
                         registerdata.put("weight", user_weight);
                         registerdata.put("height", user_height);
+                        registerdata.put("doctor number", user_number);
 
                         Log.e("TAG", registerdata.toString());
                         new Register.RegisterOperation().execute("http://192.168.0.66:8080/telematyka-serwer/register", registerdata.toString());
