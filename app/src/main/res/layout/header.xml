@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="#990048">
+    android:background="#E5DEFA">
 
     <TextView
         android:layout_height="wrap_content"
@@ -13,7 +13,7 @@
         android:id="@+id/listitemTextView1"
         android:padding="8dp"
         android:textSize="16sp"
-        android:textColor="#FCFCFC"
+        android:textColor="#2F2256"
         android:textStyle="bold"/>
 
 </LinearLayout>

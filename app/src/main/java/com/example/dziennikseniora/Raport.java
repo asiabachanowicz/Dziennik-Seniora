@@ -90,6 +90,9 @@ public class Raport extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+                else {
+                    Toast.makeText(Raport.this, "Wszystkie pola musza byc uzupelnione", Toast.LENGTH_SHORT).show();
+                }
 
                 Intent intent4 = new Intent(Raport.this, MainMenu.class);
                 startActivity(intent4);

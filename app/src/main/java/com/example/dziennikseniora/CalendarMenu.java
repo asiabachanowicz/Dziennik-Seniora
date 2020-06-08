@@ -74,10 +74,20 @@ public class CalendarMenu extends AppCompatActivity {
                 }
                 String choosen_date;
                 if (month == 10 || month == 11) {
-                    choosen_date = year + "-" + (month + 1) + "-" + dayOfMonth;
+                    if (dayOfMonth < 10) {
+                        choosen_date = year + "-" + (month + 1) + "-0" + dayOfMonth;
+                    }
+                    else {
+                        choosen_date = year + "-" + (month + 1) + "-" + dayOfMonth;
+                    }
                     Log.e("TAG", choosen_date);
                 } else {
-                    choosen_date = year + "-0" + (month + 1) + "-" + dayOfMonth;
+                    if (dayOfMonth < 10) {
+                        choosen_date = year + "-0" + (month + 1) + "-0" + dayOfMonth;
+                    }
+                    else {
+                        choosen_date = year + "-0" + (month + 1) + "-" + dayOfMonth;
+                    }
                     Log.e("TAG", choosen_date);
                 }
                 try {

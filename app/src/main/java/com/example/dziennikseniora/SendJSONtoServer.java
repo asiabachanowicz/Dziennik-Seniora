@@ -76,9 +76,9 @@ class SendJSONtoServer extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         Log.e("TAG---------", result); // this is expecting a response code to be sent from your server upon receiving the POST data
-        //if(result.contains("accepted")) {
-        //    logowany = true;
-        //}
+        if(result.contains("accepted")) {
+            logowany = true;
+        }
         }
 
     private void startActivity(Intent intent) {

@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 import static android.content.Context.WIFI_SERVICE;
 import static android.text.format.Formatter.formatIpAddress;
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class FirstFragment extends Fragment {
     public static String user_login;
@@ -75,8 +76,6 @@ public class FirstFragment extends Fragment {
                         JS.execute("http://192.168.0.66:8080/telematyka-serwer/logowanie", logindata.toString());
                     } catch (JSONException e) {
                         e.printStackTrace();
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
                 }
                 if (SendJSONtoServer.logowany == true) {
@@ -84,7 +83,7 @@ public class FirstFragment extends Fragment {
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(activity.getApplicationContext(),"Błędne hasło lub brak!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity.getApplicationContext(),"Błędne hasło lub brak!", LENGTH_SHORT).show();
                 }
             }
         });

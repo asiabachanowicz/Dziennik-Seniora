@@ -36,13 +36,16 @@ public class DoctorMessage extends AppCompatActivity {
     Button send_btn;
     String strValue;
     static final JSONObject logindata = new JSONObject();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
+        //final String server_url = "http://192.168.1.24:8080/telematyka-serwer/wiadomosc";
         final String server_url = "http://192.168.0.66:8080/telematyka-serwer/wiadomosc";
         final EditText simpleEditText = (EditText) findViewById(R.id.editText7);
+        //simpleEditText.getText().clear();
         final TextView logdate = findViewById(R.id.timeView);
         TextView date;
         Date currentTime = Calendar.getInstance().getTime();
@@ -52,7 +55,7 @@ public class DoctorMessage extends AppCompatActivity {
         try {
             logindata.put("login", FirstFragment.user_login);
             logindata.put("tresc", null);
-            logindata.put("date", null);
+            logindata.put("date", logdate.getText().toString());
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -75,6 +78,7 @@ public class DoctorMessage extends AppCompatActivity {
             }
         });
     }
+
     private class RaportOperation extends AsyncTask<String, Void, String> {
 
         private String jsonResponse;
@@ -136,10 +140,38 @@ public class DoctorMessage extends AppCompatActivity {
         }
 
         protected void onPostExecute(String result) {
-            Log.e("TAG", result);
-            String msg = result.substring(29);
-            doctor_msg = findViewById(R.id.textView7);
-            doctor_msg.setText(msg);
+                Log.e("TAG", result);
+                String msg = result.substring(29);
+                doctor_msg = findViewById(R.id.textView7);
+                Log.e("TAG", msg);
+                doctor_msg.setText("Wiadomosc " + msg.substring(0,msg.indexOf("D")) + "\n\n");
+                if (!msg.contains("null")) {
+                JSONArray jArray = null;
+                String dane_leki = msg.substring(msg.indexOf(":")+1);
+                try {
+                    jArray = new JSONArray(dane_leki.replace("=", ":"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if(jArray != null) {
+                    doctor_msg.append("Leki na dziś: \n\n");
+                    try {
+                        JSONObject jObject = null;
+                        String nazwa_leku = null;
+                        String razy_dziennie = null;
+                        for (int i = 0; i < jArray.length(); i++) {
+                            ArrayList<String> rap = new ArrayList<String>();
+                            jObject = jArray.getJSONObject(i);
+                            nazwa_leku = (String) jObject.get("nazwa");
+                            doctor_msg.append("Nazwa " + nazwa_leku + "\n");
+                            razy_dziennie = (String) jObject.get("godzina");
+                            doctor_msg.append(razy_dziennie + " razy dziennie\n\n");
+                        }
+                    } catch (JSONException e) {
+
+                    }
+                }
+            }
             DoctorMessage.logindata.remove("tresc");
         }
     }

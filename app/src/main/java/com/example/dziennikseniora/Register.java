@@ -114,6 +114,9 @@ public class Register extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+                else {
+                    Toast.makeText(Register.this, "Wszystkie pola musza byc uzupelnione", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

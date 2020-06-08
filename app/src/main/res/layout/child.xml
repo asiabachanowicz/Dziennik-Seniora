@@ -11,7 +11,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:text="Medium Text"
-        android:textColor="#C00B00"
+        android:textColor="#2F2256"
         android:id="@+id/childitemTextView1"/>
 
 </LinearLayout>
